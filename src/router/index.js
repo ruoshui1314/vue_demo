@@ -13,7 +13,6 @@ const Foo = { template: '<div>This is Foo</div>' }
 const Bar = { template: '<div>This is Bar {{ $route.params.id }}</div>' }
 
 export default new Router({
-  activeClass: true,
   mode: 'history',
   routes: [
     { path: '/counter', name: 'counter', component: Counter },
