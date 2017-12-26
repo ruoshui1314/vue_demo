@@ -2,7 +2,6 @@
   <ul class="side list-unstyled">
     <button @click="addItem({content: Math.random()})"> 增加 </button>
     <button @click="deleteItem()"> 删除 </button>
-    <button @click="increment()">+</button>
   </ul>
 </template>
 
@@ -15,8 +14,7 @@ export default {
   },
   methods: mapActions([
     'addItem',
-    'deleteItem',
-    'increment'
+    'deleteItem'
   ])
 }
 </script>
