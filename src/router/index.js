@@ -16,18 +16,9 @@ export default new Router({
   activeClass: true,
   mode: 'history',
   routes: [
-    {
-      path: '/counter',
-      component: Counter
-    },
-    {
-      path: '/demo',
-      component: Demo
-    },
-    {
-      path: '/',
-      component: HelloWorld
-    },
+    { path: '/counter', name: 'counter', component: Counter },
+    { path: '/demo', name: 'demo', component: Demo },
+    { path: '/', component: HelloWorld },
     { path: '/home', name: 'home', component: Home },
     { path: '/foo', name: 'foo', component: Foo },
     { path: '/bar/:id', name: 'bar', component: Bar },
