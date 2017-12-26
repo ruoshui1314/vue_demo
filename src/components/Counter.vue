@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Clicked: {{ $store.state.count }} times, count is {{ evenOrOdd }}.
+    Clicked: {{ count }} times, count is {{ evenOrOdd }}.
     <form>
       <ul>
         <li>
@@ -21,12 +21,17 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions, mapState } from 'vuex'
 
 export default {
-  computed: mapGetters([
-    'evenOrOdd'
-  ]),
+  computed: {
+    ...mapGetters([
+      'evenOrOdd'
+    ]),
+    ...mapState({
+      count: state => state.count
+    })
+  },
   methods: mapActions([
     'increment',
     'decrement',
