@@ -1,16 +1,27 @@
 <template>
   <div class="content">
-    <div class="item" v-for="item in items">
+    <div>use map state</div>
+    <div class="item" v-for="item in sitems">
+      content:{{ item.content }}
+    </div>
+    <div>use get </div>
+    <div v-for="item in getItems">
       content:{{ item.content }}
     </div>
   </div>
 </template>
 
 <<script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
-  computed: mapState({
-    items: state => state.items
-  })
+  computed: {
+    ...mapState({
+      sitems: state => state.demo.items
+    }),
+    ...mapGetters([
+      'getItems'
+    ])
+  }
+
 }
 </script>

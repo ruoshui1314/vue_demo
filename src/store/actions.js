@@ -1,6 +1,4 @@
 export default {
-  addItem: ({commit}, item) => { commit('ADD_ITEM', item) },
-  deleteItem: ({commit, store}) => { commit('DELETE_ITEM') },
   increment: ({ commit }) => commit('INCREMENT'),
   decrement: ({ commit }) => commit('DECREMENT'),
   incrementIfOdd ({ commit, state }) {
