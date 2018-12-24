@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import axiosApi from './api/api.js'
 
 Vue.config.productionTip = false
 
+Vue.prototype.$api = axiosApi
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
